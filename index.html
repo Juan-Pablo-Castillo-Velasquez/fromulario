@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario de Registro multiple validaciones</h1>
+      <div class="pasos">
+        <div class="step">
+          <span>Name</span>
+
+          <p class="circle">1</p>
+        </div>
+        <div class="step">
+          <span>Contact</span>
+
+          <p class="circle">2</p>
+        </div>
+
+        <div class="step">
+          <span>Birth</span>
+
+          <p class="circle">3</p>
+        </div>
+
+        <div class="step">
+          <span>Adress</span>
+
+          <p class="circle">4</p>
+        </div>
+
+        <div class="step">
+          <span>Social</span>
+
+          <p class="circle">5</p>
+        </div>
+        <div class="step">
+          <span>Account</span>
+
+          <p class="circle">6</p>
+        </div>
+      </div>
+      <div class="form-step active" id="step-1">
+        <form action="#">
+          <h4>Contacto:</h4>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Numero movil</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <div class="button-class">
+            <button type="submit">Previous</button>
+
+            <button type="submit" class="next-btn">Next</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-step" id="step-2">
+    <form action="#">
+    <h4>Redes Sociales:</h4>
+
+          <label for="social-type">Tipo de Red:</label>
+    <select required  id="social-type" name="social-type">
+        <option value="instagram">Instagram</option>
+        <option value="facebook">Facebook</option>
+        <option value="twitter">X Twitter</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="tiktok">TikTok</option>
+    </select>
+          <div class="button-class">
+            <button type="submit">Previous</button>
+
+            <button type="submit" class="next-btn">Next</button>
+          </div>
+        </form>
+</div>
+
+       <div class="form-step" id="step-3">
+        <form action="#">
+            <h4>Fecha de Nacimiento:</h4>
+            <label for="birth">Selecciona tu fecha:</label>
+            <input type="date" id="birth" name="birth" required />
+            <div class="button-class">
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-step" id="step-4">
+        <form action="#">
+            <h4>Dirección:</h4>
+            <label for="address">Dirección de residencia:</label>
+            <input type="text" id="address" name="address" required />
+            <label for="city">Ciudad:</label>
+            <input type="text" id="city" name="city" required />
+            <div class="button-class">
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-step" id="step-5">
+        <form action="#">
+            <h4>Redes Sociales:</h4>
+            <label for="social-type">Tipo de Red:</label>
+            <select required id="social-type" name="social-type">
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="twitter">X Twitter</option>
+            </select>
+            <label for="social-user">Usuario:</label>
+            <input type="text" id="social-user" name="social-user" required />
+            <div class="button-class">
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-step" id="step-6">
+        <form action="#">
+            <h4>Cuenta:</h4>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="pass">Contraseña:</label>
+            <input type="password" id="pass" name="pass" required />
+            <div class="button-class">
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit" id="finalizar">Finalizar</button>
+            </div>
+        </form>
+    </div>
+        
+
+
+    <script src="./index.js"></script>
+  </body>
+</html>

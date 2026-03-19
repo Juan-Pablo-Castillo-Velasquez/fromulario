@@ -1,0 +1,186 @@
+:root {
+    --color-button: rgb(164, 12, 12);
+    --font-title: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.container {
+    width: 40%;
+    padding: 20px;
+    height: 80%;
+    margin: 40px auto 0 auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container h1 {
+    width: 85%;
+    text-align: center;
+    padding: 20px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    padding: 20px;
+}
+
+.container .form-step form h4 {
+    color: var(--color-button);
+    font-size: 20px;
+}
+
+.container form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container form label {
+    margin: 20px 0px 5px 0px;
+    font-weight: bold;
+}
+
+
+.container form .button-class {
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.container form .button-class button {
+    background-color: var(--color-button);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 70%;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px 0px 0px;
+
+}
+
+
+
+
+
+
+
+.container .pasos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+
+}
+
+.container .pasos::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 100%;
+    z-index: -1;
+    top: 60%;
+}
+
+
+.container .pasos .circle {
+    cursor: pointer;
+    background-color: var(--color-button);
+    border-radius: 20px;
+    padding: 7px;
+    color: white;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    transition: ease-in-out 0.3s;
+
+}
+
+
+.container .pasos span {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(240, 90, 90, 0.818);
+}
+
+
+.container .pasos .circle.active {
+    background-color: rgb(240, 90, 90);
+    transform: scale(1.1);
+    color: white;
+}
+
+
+.form-step {
+    display: none;
+
+}
+
+.form-step.active {
+    display: flex;
+    flex-direction: column;
+    animation: slideIN 0.5s ease-in-out;
+}
+
+@keyframes slideIN {
+    from {
+        opacity: 0;
+        transform: translate(20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.form-step select,
+.container form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background-color: white;
+    font-family: inherit;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    box-sizing: border-box;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.container form .estabien{
+    box-shadow: 0px 0px 5px rgba(49, 238, 49, 0.5)
+    ;
+    border: solid 1px rgb(49, 238, 49);
+}
+
+
+
+.container form .error{
+    box-shadow: 0px 0px 5px rgba(238, 90, 49, 0.5)
+    ;
+    border: solid 1px rgb(248, 33, 0);
+}
+
